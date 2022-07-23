@@ -22,18 +22,27 @@
 <div class="text-right">
    <div class="full-width d-flex justify-content-center and align-items-center">
 <form class="rounded p-5 p-sm-3" action="https://formsubmit.co/e4ccd1094b05414d2fbbf8379f75b3f9" method="POST">
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                <!-- Honeypot -->
+				<input type="text" name="_honey" style="display:none;">
+
+                 <!-- Disable Captcha -->
+                     <input type="hidden" name="_captcha" value="false">
+                     <input type="hidden" name="_next" value="https://chrysolithes.github.io/demoform/success.html">
+
+				<div class="mb-3">
+				<label for="Fname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" name="Full name" id="fullname" placeholder="Name">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPhone" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="exampleInputPhone1" placeholder="PhoneNumber">
+                    <input type="text" class="form-control" name="Phone" id="exampleInputPhone1" placeholder="PhoneNumber">
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                  <input type="email" class="form-control" name="email" id="exampleEmail" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
+                     <label for="Comments" class="form-label">Message Here</label>
+                    <textarea class="form-control" name="Message Here" placeholder="Messagenow" id="floatingTextarea2" style="height: 100px"></textarea>
                 </div>
                   <button type="submit" class="btn btn-outline-success">Submit</button>
               </form>
